@@ -21,16 +21,25 @@ const docs = defineDocs({
 export default defineConfig({
   content: docs.toFumadocsSource(),
   site: {
-    name: "clackxx-docs",
-    // the URL where your site is deployed, needed for SEO features like sitemap:
-    // baseUrl: "https://example.com",
+    name: "Clackxx Project",
+    git: {
+      repo: "docs",
+      user: "Clackxx",
+      provider: "github",
+      branch: "main",
+    },
+    baseUrl: "https://Clackxx.github.io/docs",
   },
   meta: {
     root() {
       return (
         <>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin=""
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
             rel="stylesheet"
@@ -39,5 +48,4 @@ export default defineConfig({
       );
     },
   },
-})
-  .adapters(fumadocsMdx());
+}).adapters(fumadocsMdx());
