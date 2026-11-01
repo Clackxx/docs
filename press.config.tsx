@@ -20,6 +20,7 @@ const docs = defineDocs({
 
 export default defineConfig({
   content: docs.toFumadocsSource(),
+  mode: "static",
   site: {
     name: "Clackxx Project",
     git: {
