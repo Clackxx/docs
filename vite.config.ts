@@ -4,6 +4,5 @@ import press from "fumapress/vite";
 import { fumadocsMdx } from "fumadocs-mdx/vite";
 
 export default defineConfig({
-  base: "/docs/",
-  plugins: [press(), fumadocsMdx(), tailwindcss()],
+  plugins: [press({ basePath: "/docs/" }), fumadocsMdx(), tailwindcss()],
 });
